@@ -1,4 +1,4 @@
-package com.leonardo.despesas.repositories;
+package com.leonardo.despesas.models.repositories;
 
 import com.leonardo.despesas.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;

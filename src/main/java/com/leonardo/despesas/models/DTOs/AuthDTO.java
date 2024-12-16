@@ -1,4 +1,4 @@
-package com.leonardo.despesas.DTOs;
+package com.leonardo.despesas.models.DTOs;
 
 public record AuthDTO(String username, String senha) {
 }
