@@ -1,4 +1,4 @@
-package com.leonardo.despesas.models;
+package com.leonardo.despesas.models.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

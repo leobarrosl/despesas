@@ -1,6 +1,6 @@
 package com.leonardo.despesas.models.repositories;
 
-import com.leonardo.despesas.models.User;
+import com.leonardo.despesas.models.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 

@@ -1,4 +1,4 @@
-package com.leonardo.despesas.models;
+package com.leonardo.despesas.models.entities;
 
 import com.leonardo.despesas.models.Enums.CategoriasEnum;
 import com.leonardo.despesas.models.Enums.TipoPagamentoEnum;

@@ -1,7 +1,7 @@
 package com.leonardo.despesas.configurations;
 
 
-import com.leonardo.despesas.repositories.UserRepository;
+import com.leonardo.despesas.models.repositories.UserRepository;
 import com.leonardo.despesas.services.TokenService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

@@ -1,6 +1,6 @@
 package com.leonardo.despesas.services;
 
-import com.leonardo.despesas.repositories.UserRepository;
+import com.leonardo.despesas.models.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

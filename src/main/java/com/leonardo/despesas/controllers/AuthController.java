@@ -1,10 +1,10 @@
 package com.leonardo.despesas.controllers;
 
-import com.leonardo.despesas.DTOs.AuthDTO;
-import com.leonardo.despesas.DTOs.LoginResponseDTO;
-import com.leonardo.despesas.DTOs.responses.ErrorResponse;
-import com.leonardo.despesas.models.User;
-import com.leonardo.despesas.repositories.UserRepository;
+import com.leonardo.despesas.models.DTOs.AuthDTO;
+import com.leonardo.despesas.models.DTOs.responses.LoginResponseDTO;
+import com.leonardo.despesas.models.DTOs.responses.ErrorResponse;
+import com.leonardo.despesas.models.entities.User;
+import com.leonardo.despesas.models.repositories.UserRepository;
 import com.leonardo.despesas.services.TokenService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
