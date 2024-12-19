@@ -17,10 +17,13 @@ public class Perfil {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private @Getter int id;
 
-    private String nome;
-    private String sobrenome;
+    private String descricao;
 
     @ManyToOne
     @JoinColumn(name = "id_user")
     private User user;
+
+    public void update(Perfil perfilAtualizado) {
+        descricao = perfilAtualizado.getDescricao();
+    }
 }

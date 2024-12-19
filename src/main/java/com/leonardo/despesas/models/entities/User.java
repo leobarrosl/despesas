@@ -26,9 +26,14 @@ public class User implements UserDetails {
     private String username;
     private String senha;
 
-    public User(String username, String senha) {
+    private String nome;
+    private String sobrenome;
+
+    public User(String username, String senha, String nome, String sobrenome) {
         this.username = username;
         this.senha = senha;
+        this.nome = nome;
+        this.sobrenome = sobrenome;
     }
 
     @Override

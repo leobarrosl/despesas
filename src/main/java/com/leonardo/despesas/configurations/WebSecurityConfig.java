@@ -57,7 +57,7 @@ public class WebSecurityConfig {
 
         http.exceptionHandling(exceptionHandler ->
                 exceptionHandler.authenticationEntryPoint((request, response, ex) -> {
-                    log.error("Erro de autenticação: "+request.getServletPath(), ex);
+                    log.error("Erro de autenticação: " + request.getServletPath(), ex);
                     sendMessageResponse(response, HttpServletResponse.SC_UNAUTHORIZED, ex.getMessage());
                 })
         );

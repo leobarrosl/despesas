@@ -29,4 +29,11 @@ public class Parcela {
     @ManyToOne
     @JoinColumn(name = "id_lancamento")
     private Lancamento lancamento;
+
+    public Parcela(LocalDate dataPagamento, Double valor, boolean pago, Lancamento lancamento) {
+        this.dataPagamento = dataPagamento;
+        this.valor = valor;
+        this.pago = pago;
+        this.lancamento = lancamento;
+    }
 }

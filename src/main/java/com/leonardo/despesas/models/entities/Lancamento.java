@@ -30,11 +30,34 @@ public class Lancamento {
 
     private boolean receita;
 
+    @Column(name = "valor_total")
+    private Double valorTotal;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "categoria")
-    private CategoriasEnum Categoria;
+    private CategoriasEnum categoria;
 
     @ManyToOne
     @JoinColumn(name = "id_perfil")
     private Perfil perfil;
+
+    public Lancamento(
+            String descricao,
+            TipoPagamentoEnum tipoPagamento,
+            Integer numeroParcelas,
+            Boolean receita,
+            Double valorTotal,
+            CategoriasEnum categoria,
+            Perfil perfil
+            )
+    {
+        this.descricao = descricao;
+        this.tipoPagamento = tipoPagamento;
+        this.numeroParcelas = numeroParcelas;
+        this.receita = receita;
+        this.valorTotal = valorTotal;
+        this.categoria = categoria;
+        this.perfil = perfil;
+
+    }
 }

@@ -1,6 +1,7 @@
 package com.leonardo.despesas.controllers;
 
 import com.leonardo.despesas.models.DTOs.AuthDTO;
+import com.leonardo.despesas.models.DTOs.RegisterDTO;
 import com.leonardo.despesas.models.DTOs.responses.LoginResponseDTO;
 import com.leonardo.despesas.models.DTOs.responses.ErrorResponse;
 import com.leonardo.despesas.models.entities.User;
@@ -48,12 +49,12 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity register(@RequestBody AuthDTO data) {
+    public ResponseEntity register(@RequestBody RegisterDTO data) {
         if (this.userRepository.findByUsername(data.username()).isPresent()) return ResponseEntity.badRequest().body(new ErrorResponse("Usuário já está cadastrado."));
         if (data.senha().length() < 8) return ResponseEntity.badRequest().body(new ErrorResponse("Senha muito curta."));
 
         String encryptedPassword = new BCryptPasswordEncoder().encode(data.senha());
-        User newUser = new User(data.username(), encryptedPassword);
+        User newUser = new User(data.username(), encryptedPassword, data.nome(), data.sobrenome());
 
         this.userRepository.save(newUser);
 
