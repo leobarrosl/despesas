@@ -36,4 +36,10 @@ public class Parcela {
         this.pago = pago;
         this.lancamento = lancamento;
     }
+
+    public void update(LocalDate dataPagamento, Double valor, boolean pago) {
+        this.dataPagamento = dataPagamento;
+        this.valor = valor;
+        this.pago = pago;
+    }
 }

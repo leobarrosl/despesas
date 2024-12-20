@@ -1,5 +1,6 @@
 package com.leonardo.despesas.models.repositories;
 
+import com.leonardo.despesas.models.entities.Lancamento;
 import com.leonardo.despesas.models.entities.Parcela;
 import com.leonardo.despesas.models.entities.Perfil;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -19,4 +20,9 @@ public interface ParcelasRepository extends JpaRepository<Parcela, Integer> {
             YEAR(pa.dataPagamento) = :year
             """)
     List<Parcela> findByPerfilAndMonth(Perfil perfil, Integer month, Integer year);
+
+    List<Parcela> findByLancamento(Lancamento lancamento);
+
+    @Query("SELECT SUM(p.valor) FROM Parcela p WHERE p.lancamento = :lancamento")
+    Double sumByLancamento(Lancamento lancamento);
 }

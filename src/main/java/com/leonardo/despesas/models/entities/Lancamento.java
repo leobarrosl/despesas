@@ -8,6 +8,8 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Table(name = "lancamentos")
 @Data
@@ -40,6 +42,10 @@ public class Lancamento {
     @ManyToOne
     @JoinColumn(name = "id_perfil")
     private Perfil perfil;
+
+    @OneToMany
+    @JoinColumn(name = "id_lancamento")
+    private List<Parcela> parcelas;
 
     public Lancamento(
             String descricao,
