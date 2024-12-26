@@ -54,7 +54,7 @@ public class AuthController {
         if (data.senha().length() < 8) return ResponseEntity.badRequest().body(new ErrorResponse("Senha muito curta."));
 
         String encryptedPassword = new BCryptPasswordEncoder().encode(data.senha());
-        User newUser = new User(data.username(), encryptedPassword, data.nome(), data.sobrenome());
+        User newUser = new User(data.username(), encryptedPassword, data.nome(), data.sobrenome(), data.email(), data.telefone());
 
         this.userRepository.save(newUser);
 

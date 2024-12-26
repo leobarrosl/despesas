@@ -28,12 +28,16 @@ public class User implements UserDetails {
 
     private String nome;
     private String sobrenome;
+    private String email;
+    private String telefone;
 
-    public User(String username, String senha, String nome, String sobrenome) {
+    public User(String username, String senha, String nome, String sobrenome, String email, String telefone) {
         this.username = username;
         this.senha = senha;
         this.nome = nome;
         this.sobrenome = sobrenome;
+        this.email = email;
+        this.telefone = telefone;
     }
 
     @Override
